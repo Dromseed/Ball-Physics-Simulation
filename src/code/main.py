@@ -52,6 +52,7 @@ class Game:
             #Filling surface: 
             #================================================================================================
             self.display.fill((64, 64, 64))          
+            
             #Drawing a ball: 
             #================================================================================================
             self.Ball_1.draw(self.display)
@@ -60,10 +61,10 @@ class Game:
             
             #Drawing text to the screen:
             #================================================================================================
-            self.FPS_Show = text.FPS(self.clock, self.display, fontsize=24)
+            self.FPS_Show = text.FPS(self.clock, self.display, fontsize=20)
             self.FPS_Show.draw()
             #================================================================================================
-            self.Position_Show = text.Ball_Position(self.Ball_1.x, self.Ball_1.y, self.display, fontsize=24)
+            self.Position_Show = text.Ball_Position(self.Ball_1.x, self.Ball_1.y, self.display, fontsize=20)
             self.Position_Show.draw()
             #================================================================================================
 
