@@ -36,14 +36,14 @@ class Game:
                         mouse_x, mouse_y = py.mouse.get_pos()                       
                         if (mouse_x - self.Ball_1.x) ** 2 + (mouse_y - self.Ball_1.y) ** 2 <= self.Ball_1.radius ** 2:
                             self.mouse_pressed = True   
-                            self.start_x, self.start_y = event.pos  # Сохраняем начальные координаты круга
-                            self.Ball_1.speed_x, self.Ball_1.speed_y = 0, 0  # Сброс скоростей
+                            self.start_x, self.start_y = event.pos  # Saving the initial coordinates of the circle
+                            self.Ball_1.speed_x, self.Ball_1.speed_y = 0, 0  # Resetting speeds
                                          
                 if event.type == py.MOUSEBUTTONUP:
                     if event.button == 1:  # Left mouse button
                         print("Left mouse button not pressed")
                         self.mouse_pressed = False
-                        self.Ball_1.speed_x = (event.pos[0] - self.start_x) / 10  # Горизонтальная скорость зависит от перемещения мыши
+                        self.Ball_1.speed_x = (event.pos[0] - self.start_x) / 10  # Horizontal speed depends on mouse movement
                         self.Ball_1.speed_y  = (event.pos[1] - self.start_y) / 10
                 
                 if event.type == py.K_f:
