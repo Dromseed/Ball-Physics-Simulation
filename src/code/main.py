@@ -45,11 +45,7 @@ class Game:
                         self.mouse_pressed = False
                         self.Ball_1.speed_x = (event.pos[0] - self.start_x) / 10  # Horizontal speed depends on mouse movement
                         self.Ball_1.speed_y  = (event.pos[1] - self.start_y) / 10
-                
-                if event.type == py.K_f:
-                    self.Ball_1.x = self.SCREEN_WIDTH / 2
-                    self.Ball_1.y = self.SCREEN_HEIGHT / 2
-                
+                                
             if self.mouse_pressed:
                 mouse_x, mouse_y = py.mouse.get_pos()
                         
